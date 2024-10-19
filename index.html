@@ -11,7 +11,7 @@
             text-align: center;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -30,18 +30,19 @@
             font-size: 18px;
         }
 
-        .gallery {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 20px;
-        }
-
         .mainImage img {
-            width: 720px;
-            height: 500px;
+            width: 100%;
+            height: auto;
             border-radius: 10px;
             transition: transform 0.3s ease-in-out;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas en pantallas pequeñas */
+            margin-top: 20px;
         }
 
         .gallery img {
@@ -50,15 +51,16 @@
             border-radius: 10px;
             transition: transform 0.3s ease-in-out;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform-origin: bottom; /* Establece el origen de la transformación en la parte inferior */
+            transform-origin: bottom;
         }
 
         .gallery img:hover {
-            transform: scale(2.5); /* Amplía la imagen un 150% solo hacia arriba */
+            transform: scale(2.5);
         }
+
         .gallery img:nth-child(5):hover {
-            transform: rotate(90deg) scale(2.5); /* Rotar 90 grados en hover */
-            transform-origin: center; /* Mantener el centro como origen para la rotación */
+            transform: rotate(90deg) scale(2.5);
+            transform-origin: center;
         }
 
         .footer {
@@ -66,22 +68,47 @@
             font-size: 16px;
             color: #999;
         }
+
+        /* Media queries para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .mainImage img {
+                width: 100%;
+                height: auto;
+            }
+
+            .gallery img {
+                width: 80px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery img {
+                margin-bottom: 15px;
+                width: 60px;
+                height: 100px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="mainImage">    
-            <img src="INVITACION.jpg" alt="Imagen 1">
-          </div>
+            <img src="INVITACION.jpg" alt="Imagen principal">
+        </div>
           
         <div class="gallery">
             <img src="TARJETA1.jpg" alt="Imagen 1">
-            <img src="TARJETA 2.jpg" alt="Imagen 2">
-            <img src="TARJETA 3.jpg" alt="Imagen 3">
-            <img src="TARJETA 4.jpg" alt="Imagen 4">
-            <img src="TARJETA 5.jpg" alt="Imagen 5">
+            <img src="TARJETA2.jpg" alt="Imagen 2">
+            <img src="TARJETA3.jpg" alt="Imagen 3">
+            <img src="TARJETA4.jpg" alt="Imagen 4">
+            <img src="TARJETA5.jpg" alt="Imagen 5">
         </div>
     </div>
-
 </body>
 </html>
