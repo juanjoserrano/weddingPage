@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        .mainImage img {
+            width: 720px;
+            height: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery img {
+            width: 100px;
+            height: 160px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform-origin: bottom; /* Establece el origen de la transformación en la parte inferior */
+        }
+
+        .gallery img:hover {
+            transform: scale(2.5); /* Amplía la imagen un 150% solo hacia arriba */
+        }
+        .gallery img:nth-child(5):hover {
+            transform: rotate(90deg) scale(2.5); /* Rotar 90 grados en hover */
+            transform-origin: center; /* Mantener el centro como origen para la rotación */
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mainImage">    
+            <img src="INVITACION.jpg" alt="Imagen 1">
+          </div>
+          
+        <div class="gallery">
+            <img src="TARJETA1.jpg" alt="Imagen 1">
+            <img src="TARJETA 2.jpg" alt="Imagen 2">
+            <img src="TARJETA 3.jpg" alt="Imagen 3">
+            <img src="TARJETA 4.jpg" alt="Imagen 4">
+            <img src="TARJETA 5.jpg" alt="Imagen 5">
+        </div>
+    </div>
+
+</body>
+</html>
